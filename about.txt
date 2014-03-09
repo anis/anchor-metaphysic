@@ -1,0 +1,5 @@
+Theme name:    Web &lt;meta&gt;physic
+Description:   Pure and clean blog theme for developers
+Author name:   Anis Safine
+Author site:   http://anis.pro
+License:       http://opensource.org/licenses/MIT

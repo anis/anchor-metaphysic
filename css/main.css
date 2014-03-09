@@ -1,0 +1,160 @@
+body {
+    width: 856px;
+    margin: 0 auto;
+
+    color: #444;
+    font-size: 18px;
+    /* Font found on dafont.com: http://www.dafont.com/fr/foglihten.font */
+    font-family: Foglihten, Courier New, serif;
+}
+
+.clearer {
+    clear: both;
+}
+
+body > footer {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-right: 20px;
+    height: 52px;
+    position: absolute;
+    background: #efefef;
+}
+
+body > footer ul {
+    list-style: none;
+    margin-top: 10px;
+    text-align: right;
+}
+
+body > footer li {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+body > footer li a {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+body > footer li a.twitter {
+    background: url('../img/twitter-icon.png') no-repeat center;
+}
+
+body > footer li a.github {
+    background: url('../img/github-icon.png') no-repeat center;
+}
+
+body > footer li .twitter {
+    display: block;
+}
+
+body > header {
+    margin-top: 102px;
+    text-align: center;
+    line-height: 35px;
+}
+
+body > header h1 {
+    font-size: 2em;
+}
+
+body > header h1 em {
+    font-style: normal;
+}
+
+body.blue > header h1 em {
+    color: blue;
+}
+
+body.green > header h1 em {
+    color: green;
+}
+
+body.pink > header h1 em {
+    color: pink;
+}
+
+body.purple > header h1 em {
+    color: purple;
+}
+
+body.red > header h1 em {
+    color: red;
+}
+
+body > header h2 {
+    font-weight: normal;
+    font-size: 1em;
+    font-style: italic;
+}
+
+body > .posts {
+    margin-top: 50px;
+}
+
+body > .posts article {
+    margin-bottom: 80px;
+}
+
+body > .posts article > header figcaption {
+    margin: 25px 0 20px;
+    padding: 8px 0 8px 25px;
+    border-left: 5px solid #efefef;
+}
+
+body > .posts article > header h1 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+body > .posts article > header p {
+    line-height: 1.5em;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+body > .posts article .content p {
+    margin-bottom: 20px;
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+body > .posts article .content p:first-child {
+    text-indent: 30px;
+}
+
+body > .posts article .content a {
+    color: #4680d3;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body > .posts article .content a:hover {
+    text-decoration: none;
+}
+
+body > .posts .pagination .wrap span {
+    display: block;
+    padding-top: 3px;
+    text-align: center;
+}
+
+body > .posts .pagination .wrap span a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body > .posts .pagination .wrap span.left {
+    float: left;
+    border-right: 5px solid #efefef;
+}
+
+body > .posts .pagination .wrap span.right {
+    float: right;
+    border-left: 5px solid #efefef;
+}

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Foglihten';
+    src: url('../font/Foglihten.eot');
+    src: local('☺'), url('../font/Foglihten.woff') format('woff'), url('../font/Foglihten.ttf') format('truetype'), url('../font/Foglihten.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
