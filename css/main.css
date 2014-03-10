@@ -4,6 +4,11 @@ body {
 
     color: #444;
     font-size: 18px;
+}
+
+body,
+input,
+textarea {
     /* Font found on dafont.com: http://www.dafont.com/fr/foglihten.font */
     font-family: Foglihten, Courier New, serif;
 }
@@ -129,6 +134,11 @@ body > .posts article > header p.comments {
     color: #bbb;
 }
 
+body > .posts article > header p.comments a:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
 body > .posts article > header p.comments span {
     font-size: 2em;
 }
@@ -155,21 +165,107 @@ body > .posts article .content a:hover {
 
 body > .posts .pagination .wrap span {
     display: block;
-    padding-top: 3px;
     text-align: center;
 }
 
 body > .posts .pagination .wrap span a {
+    padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    border-top: 5px solid #fafafa;
+}
+
+body > .posts .pagination .wrap span a:hover {
+    border-top-color: #efefef;
 }
 
 body > .posts .pagination .wrap span.left {
     float: left;
-    border-right: 5px solid #efefef;
 }
 
 body > .posts .pagination .wrap span.right {
     float: right;
-    border-left: 5px solid #efefef;
+}
+
+body > .comments {
+    margin-top: -40px;
+    margin-bottom: 80px;
+    padding-top: 40px;
+    border-top: 3px dotted #efefef;
+}
+
+body > .comments .no-comments {
+    font-style: italic;
+}
+
+body > .comments article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+body > .comments article figure {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+body > .comments article header {
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+body > .comments article header time {
+    float: right;
+    font-style: italic;
+}
+
+body > .comments article header,
+body > .comments article .content {
+    margin-left: 100px;
+    word-wrap: break-word;
+}
+
+body > .comments form {
+    padding-top: 20px;
+}
+
+body > .comments .notifications p {
+    padding: 10px;
+}
+
+body > .comments .notifications p.success {
+    background: darkseagreen;
+    color: #fff;
+}
+
+body > .comments form p {
+    margin-bottom: 18px;
+}
+
+body > .comments form p > * {
+    display: inline-block;
+    line-height: 30px;
+}
+
+body > .comments form p label {
+    width: 180px;
+}
+
+body > .comments form p input,
+body > .comments form p textarea {
+    vertical-align: middle;
+    resize: none;
+}
+
+body > .comments form p input {
+    width: 300px;
+    padding-left: 15px;
+}
+
+body > .comments form p textarea {
+    width: 826px;
+    padding: 15px;
 }
