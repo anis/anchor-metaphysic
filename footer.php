@@ -1,6 +1,6 @@
         <footer>
             <ul>
-                <li>Suivez moi !</li>
+                <li>Qui m'aime me suive !</li>
                 <?php if(twitter_account()): ?>
                 <li><a href="<?php echo twitter_url(); ?>" class="twitter" title="Suivez moi sur Twitter : <?php echo twitter_account(); ?>"></a></li>
                 <?php endif; ?>
