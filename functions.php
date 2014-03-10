@@ -1,4 +1,10 @@
 <?php
+function pluralise($amount, $str, $alt = '') {
+    return intval($amount) === 1 || substr($str, -1) === 's'
+        ? $str
+        : $str . ($alt !== '' ? $alt : 's');
+}
+
 function twitter_account() {
 	return site_meta('twitter');
 }
