@@ -163,6 +163,13 @@ body > .posts article .content a:hover {
     text-decoration: none;
 }
 
+body > .posts article code {
+    padding: 10px;
+    font-size: 0.9em;
+    letter-spacing: -1.5px;
+    border-bottom: 8px solid #efefef;
+}
+
 body > .posts .pagination .wrap span {
     display: block;
     text-align: center;

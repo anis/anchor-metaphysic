@@ -10,12 +10,17 @@
             </ul>
         </footer>
 
+        <script src="<?php echo theme_url('/js/highlight.pack.js'); ?>"></script>
         <script>
+            // Colorize <meta>
             var colors = ['red', 'green', 'blue', 'pink', 'purple'];
             var selectedColor = colors[Math.floor(Math.random() * (colors.length - 1))];
 
             document.body.setAttribute('class', document.body.getAttribute('class') + ' ' + selectedColor);
             document.body.setAttribute('className', document.body.getAttribute('className') + ' ' + selectedColor); // IE
+
+            // Highlightjs
+            hljs.initHighlightingOnLoad();
         </script>
     </body>
 </html>

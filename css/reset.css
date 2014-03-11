@@ -5,7 +5,8 @@ h2,
 figure,
 p,
 ul,
-textarea {
+textarea,
+pre {
     margin: 0;
     padding: 0;
 }

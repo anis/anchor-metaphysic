@@ -42,7 +42,7 @@
         </header>
 
         <div class="content">
-            <?php echo article_markdown(); ?>
+            <?php echo preg_replace('`<(/)?code>`', '<$1pre><$1code>', article_markdown()); ?>
         </div>
     </article>
 </section>
