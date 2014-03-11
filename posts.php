@@ -37,7 +37,7 @@
                             par <a href="#" rel="author"><?php echo article_author(); ?></a>.
                         </p>
                         <?php if(comments_open()): ?>
-                        <p class="comments"><span><?php echo total_comments(); ?></span> <?php echo pluralise(total_comments(), 'commentaire'); ?></p>
+                        <p class="comments"><span><?php echo my_total_comments(); ?></span> <?php echo pluralise(my_total_comments(), 'commentaire'); ?></p>
                         <?php endif; ?>
                     </figcaption>
                 </figure>

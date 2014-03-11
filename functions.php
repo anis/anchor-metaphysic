@@ -59,3 +59,9 @@ function github_url() {
 function comment_gravatar() {
     return 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( comment_email() ) ) ) . '?s=80';
 }
+
+function my_total_comments() {
+    return Comment::where('post', '=', article_id())
+        ->where('status', '=', 'approved')
+        ->count();
+}
