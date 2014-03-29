@@ -44,6 +44,45 @@ function twitter_account() {
 	return site_meta('twitter');
 }
 
+/*
+ * Returns the necessary query string to append to the share URL of the requested social network
+ *
+ * @param string $network Network name (either 'twitter', 'facebook', or 'google')
+ *
+ * @return string
+ */
+function shareParameters($network) {
+    // List of parameters for each network
+    $parameters = array(
+        'twitter' => array(
+            'lang'    => 'fr',
+            'text'    => '"' . article_title() . '"' . (twitter_account() ? ' via @' . twitter_account() : '') . ' — ',
+            'url'     => full_url() . current_url(),
+            'related' => twitter_account() ? twitter_account() : null
+        ),
+        'facebook' => array(
+            's'            => 100,
+            'p[title]'     => article_title(),
+            'p[summary]'   => article_description(),
+            'p[url]'       => full_url() . current_url(),
+            'p[images][0]' => str_replace('/index.php/', '', full_url()) . article_custom_field('thumbnail'),
+        ),
+        'google' => array(
+            'url' => full_url() . current_url(),
+        )
+    );
+
+    // Build up the query string
+    $queryBlocks = array();
+    foreach ($parameters[$network] as $key => $value) {
+        if ($value !== null ) {
+            array_push($queryBlocks, $key . '=' . urlencode($value));
+        }
+    }
+
+    return implode('&', $queryBlocks);
+}
+
 function twitter_url() {
 	return 'https://twitter.com/' . twitter_account();
 }

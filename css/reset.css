@@ -6,7 +6,8 @@ figure,
 p,
 ul,
 textarea,
-pre {
+pre,
+aside {
     margin: 0;
     padding: 0;
 }

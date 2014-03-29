@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
 
-        <meta name="description" content="<?php echo site_description(); ?>">
-
         <link rel="stylesheet" href="<?php echo theme_url('/css/reset.css'); ?>">
         <link rel="stylesheet" href="<?php echo theme_url('/css/fonts.css'); ?>">
         <link rel="stylesheet" href="<?php echo theme_url('/css/main.css'); ?>">
@@ -22,13 +20,19 @@
 
         <meta name="viewport" content="width=device-width">
         <meta name="generator" content="Anchor CMS">
+        <meta name="title" content="<?php echo article_id() ? article_title() : site_name(); ?>">
+        <meta name="description" content="<?php echo article_id() ? article_description() : site_description(); ?>">
 
-        <meta property="og:title" content="<?php echo site_name(); ?>">
+        <meta property="fb:app_id" content="<?php echo site_meta('facebook-app-id'); ?>">
         <meta property="og:type" content="blog">
-        <meta property="og:url" content="<?php echo e(current_url()); ?>">
-        <meta property="og:image" content="<?php echo theme_url('img/og_image.gif'); ?>">
+        <meta property="og:url" content="<?php echo full_url() . current_url(); ?>">
+        <meta property="og:title" content="<?php echo article_id() ? article_title() : site_name(); ?>">
+        <!-- name='og:image' for Google+ -->
+        <meta name="og:image" content="<?php echo str_replace('/index.php/', '', full_url()) . (article_id() ? article_custom_field('thumbnail') : theme_url('img/og_image.gif')); ?>">
+        <!-- property='og:image' for Facebook -->
+        <meta property="og:image" content="<?php echo str_replace('/index.php/', '', full_url()) . (article_id() ? article_custom_field('thumbnail') : theme_url('img/og_image.gif')); ?>">
+        <meta property="og:description" content="<?php echo article_id() ? article_description() : site_description(); ?>">
         <meta property="og:site_name" content="<?php echo site_name(); ?>">
-        <meta property="og:description" content="<?php echo site_description(); ?>">
 
         <?php if(customised()): ?>
             <!-- Custom CSS -->

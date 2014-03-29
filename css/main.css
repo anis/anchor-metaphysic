@@ -103,6 +103,7 @@ body > .posts {
 }
 
 body > .posts article {
+    position: relative;
     margin-bottom: 80px;
 }
 
@@ -170,9 +171,39 @@ body > .posts article code {
     border-bottom: 8px solid #efefef;
 }
 
-body > .posts .pagination .wrap span {
+body > .posts article > aside {
+    position: absolute;
+    right: -88px;
+    margin-top: -85px;
+    width: 64px;
+}
+
+body > .posts article > aside > p {
+    margin: 0;
+    padding: 0;
+}
+
+body > .posts article > aside > p,
+body > .posts article > aside > p a {
+    width: 64px;
+}
+
+body > .posts article > aside > p a {
+    margin-bottom: 10px;
     display: block;
-    text-align: center;
+    height: 64px;
+}
+
+body > .posts article > aside > p a.twitter {
+    background: url('../img/share-twitter.png') no-repeat 0 0;
+}
+
+body > .posts article > aside > p a.facebook {
+    background: url('../img/share-facebook.png') no-repeat 0 0;
+}
+
+body > .posts article > aside > p a.google-plus {
+    background: url('../img/share-google.png') no-repeat 0 0;
 }
 
 body > .posts .pagination .wrap span a {

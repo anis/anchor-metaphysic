@@ -41,6 +41,20 @@
             </figure>
         </header>
 
+        <aside class="social">
+            <p>
+                <a class="twitter"
+                   href="https://twitter.com/share?<?php echo shareParameters('twitter'); ?>"
+                   onclick="window.open(this.getAttribute('href'), 'Twitter', 'menubar=no,status=no,width=600,height=600'); return false;"></a>
+                <a class="facebook"
+                   href="http://www.facebook.com/sharer.php?<?php echo shareParameters('facebook'); ?>"
+                   onclick="window.open(this.getAttribute('href'), 'Facebook', 'menubar=no,status=no,width=600,height=600'); return false;"></a>
+                <a class="google-plus"
+                   href="https://plus.google.com/share?<?php echo shareParameters('google'); ?>"
+                   onclick="window.open(this.getAttribute('href'), 'Google+', 'menubar=no,status=no,width=600,height=600'); return false;"></a>
+            </p>
+        </aside>
+
         <div class="content">
             <?php echo preg_replace('`<(/)?code>`', '<$1pre><$1code>', article_markdown()); ?>
         </div>
